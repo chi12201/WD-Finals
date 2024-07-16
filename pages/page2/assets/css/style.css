@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+  }
+
+  body{
+    background-color: #001e20;
+  }
+
+  header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .logo{
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+  }
+  
+  .logo img{
+    width: 60px;
+    margin-right: 10px;
+  }
+
+  header a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 10px 20px;
+    transition: 0.5s;
+
+}
+  header a:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgb(0, 255, 213));
+  }
+
+  header a{
+    width: 80px;
+    transition: 1s;
+  }
+  
+  nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+  }
+  
+  nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #868686;
+    font-size: 1.1em;
+    padding: 6px 20px;
+    transition: 0.5s;
+
+  }
+  
+  nav ul li a:hover{
+    color: #0ef;
+  }
+  
+  nav ul li a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 4px solid #0ef;
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  nav ul li a:hover span{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  @keyframes slideRight {
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+/*-----Skills-----*/
+
+.sub-title{
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+  margin-top: 15%;
+}
+
+.sub-title span{
+  color: #0ef;
+}
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container1{
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px;
+  margin-left: 120px;
+}
+
+.heading1{
+  color: #ffffff;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+}
+
+.bar{
+  font-size: 23px;
+}
+
+.Technical-bars .bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Technical-bars .bar .info {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  width: 80%;
+  height: 5px;
+  background: #000000;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+.Technical-bars .bar .progress-line span {
+  position: absolute;
+  height: 100%;
+  border-radius: 5px;
+  animation: progress-animation 2s ease-in-out;
+}
+
+
+.Technical-bars .bar .progress-line.html span { width: 95%; background: #0ef; }
+.Technical-bars .bar .progress-line.css span { width: 70%; background: #0ef; }
+.Technical-bars .bar .progress-line.javascript span { width: 35%; background: #0ef; }
+.Technical-bars .bar .progress-line.python span { width: 0%; background: #0ef; }
+.Technical-bars .bar .progress-line.react span { width: 0%; background: #0ef; }
+
+
+@keyframes progress-animation {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes showText{
+  100%{
+    opacity:1;
+  }
+}
+
+/*-----radial bars-----*/
+
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.radial-bars svg {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-bar {
+  fill: none;
+  stroke-width: 15;
+}
+
+.progress-bar.bg {
+  stroke: #000000;
+}
+
+.progress-bar.fg {
+  stroke: #0ef;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.radial-bars .percentage,
+.radial-bars .text {
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
