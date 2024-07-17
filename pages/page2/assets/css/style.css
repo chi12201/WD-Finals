@@ -236,3 +236,12 @@ section{
   margin-top: 5px;
 }
 
+.footer p{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: rgb(2, 85, 91);
+  font-weight: 300;
+  margin-top: 50%;
+}
+
